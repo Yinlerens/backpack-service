@@ -1,5 +1,4 @@
 .git
 .env
 .env.local
-backpack-service.exe
-
+/backpack-service.exe

@@ -1,5 +1,4 @@
-backpack-service.exe
-backpack-service
+/backpack-service.exe
+/backpack-service
 .env
 .env.local
-
