@@ -30,7 +30,7 @@ spec:
           type: RuntimeDefault
       containers:
         - name: backpack-service
-          image: ghcr.io/yinlerens/backpack-service@sha256:71034ff42421846987c48831ad7988a8d909ebb3f676aee1ef3f2a709387bdaa
+          image: ghcr.io/yinlerens/backpack-service@sha256:d8e0f3b6d3ce78720b60db59be3fb7b87627889e56142e423c566833f9fe87c6
           imagePullPolicy: Always
           ports:
             - name: http
