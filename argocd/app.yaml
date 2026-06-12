@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: backpack-service
+  namespace: argocd
+  labels:
+    app.kubernetes.io/name: backpack-service
+    app.kubernetes.io/part-of: backpack-service
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Yinlerens/backpack-service.git
+    targetRevision: main
+    path: k8s
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: backpack-service
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - PruneLast=true
+

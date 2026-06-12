@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: backpack-service
+  namespace: backpack-service
+  labels:
+    app.kubernetes.io/name: backpack-service
+    app.kubernetes.io/part-of: backpack-service
+spec:
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/name: backpack-service
+  ports:
+    - name: http
+      port: 80
+      targetPort: http
+      protocol: TCP
+
